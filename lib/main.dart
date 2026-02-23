@@ -25,9 +25,15 @@ class CounterWidget extends StatefulWidget {
 class _CounterWidgetState extends State<CounterWidget> {
   int _counter = 0;
 
+  Color _getStatusColor() {
+    if (_counter == 0) return Colors.red;
+    if (_counter <= 50) return Colors.orange;
+    return Colors.green;
+  }
+
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      if (_counter < 100) _counter++;
     });
   }
 
@@ -56,10 +62,10 @@ class _CounterWidgetState extends State<CounterWidget> {
         children: [
           Center(
             child: Container(
-              color: Colors.blue,
+              color: _getStatusColor(),
               padding: const EdgeInsets.all(16),
               child: Text(
-                '$_counter',
+                _counter == 100 ? 'LIFTOFF!' : '$_counter',
                 style: const TextStyle(fontSize: 50.0, color: Colors.white),
               ),
             ),
