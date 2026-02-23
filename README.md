@@ -1,16 +1,10 @@
-# rocket_launch
+# Rocket Launch Controller
 
-A new Flutter project.
+In-Class Activity 6 — Stateful Rocket Launch
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Ignite / Decrement / Reset** buttons to control the launch counter
+- Counter clamped between **0** and **100**
+- **Visual status colors**: red (0), orange (1–50), green (51–99)
+- Displays **"LIFTOFF!"** when the counter reaches 100
